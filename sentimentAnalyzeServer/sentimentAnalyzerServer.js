@@ -100,7 +100,7 @@ app.get("/text/emotion", (req,res) => {
  naturalLanguageUnderstanding.analyze(analyzeParams)
  .then(analysisResults => {
      console.log(analysisResults);
-     console.log(JSON.stringify(analysisResults.result.entities[0].emotion,null,2));
+     //console.log(JSON.stringify(analysisResults.result.entities[0].emotion,null,2));
      return res.send(analysisResults.result.entities[0].emotion,null,2);
  })
  .catch(err => {
